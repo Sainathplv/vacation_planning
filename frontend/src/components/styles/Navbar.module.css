@@ -1,0 +1,101 @@
+/* General Navbar Styles */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #333;
+  color: white;
+}
+
+.navList {
+  list-style: none;
+  display: flex;
+  gap: 15px;
+  margin: 0;
+  padding: 0;
+}
+
+.navItem {
+  display: inline;
+}
+
+.navLink {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+  padding: 8px 16px;
+  transition: background-color 0.3s ease;
+}
+
+.navLink:hover {
+  background-color: #444;
+  border-radius: 5px;
+}
+
+/* Profile Dropdown Styles */
+.profileDropdown {
+  position: relative;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  padding: 8px 16px;
+}
+
+.profileDropdown i {
+  font-size: 24px; /* Font Awesome icon size */
+  margin-right: 8px;
+  color: white;
+}
+
+.profileDropdown span {
+  font-size: 16px;
+  color: white;
+}
+
+/* Dropdown Menu */
+.dropdownMenu {
+  position: absolute;
+  top: 40px;
+  right: 0;
+  background-color: white;
+  color: #333;
+  border-radius: 5px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  padding: 10px 0;
+  display: none; /* Hidden by default */
+  flex-direction: column;
+  z-index: 100;
+}
+
+.dropdownMenu.open {
+  display: flex; /* Show when 'open' class is applied */
+}
+
+.dropdownMenu li {
+  padding: 10px 20px;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.dropdownMenu li:hover {
+  background-color: #f0f0f0;
+}
+
+/* Dropdown Links */
+.dropdownLink {
+  color: #333;
+  text-decoration: none;
+  font-size: 14px;
+  display: block;
+  width: 100%;
+}
+
+.dropdownLink:hover {
+  background-color: #e0e0e0;
+}
+
+/* Hover effect for Profile Dropdown */
+.profileDropdown:hover .dropdownMenu {
+  display: flex; /* Open the dropdown menu on hover */
+}
